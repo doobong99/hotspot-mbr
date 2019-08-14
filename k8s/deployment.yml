@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: yeobi-gs-spring-boot-docker
-        image: dep-dev-registry.cloudzcp.io/yeobi/gs-spring-boot-docker:32
+        image: dep-dev-registry.cloudzcp.io/hotspot/gs-spring-boot-docker:32
       imagePullSecrets:
       - name: jonas-secret
 #        ports:
