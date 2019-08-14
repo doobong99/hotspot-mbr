@@ -2,8 +2,8 @@
 
 def label = "jenkins-${UUID.randomUUID().toString()}"
 
-def ZCP_USERID='09707'
-def DOCKER_IMAGE='sample/gs-spring-boot-docker'
+def ZCP_USERID='05867'
+def DOCKER_IMAGE='hotspot/gs-spring-boot-docker'
 def K8S_NAMESPACE='dex-dev'
 
 podTemplate(label:label,
