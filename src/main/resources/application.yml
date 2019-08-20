@@ -2,7 +2,12 @@ spring:
   profiles:
     active: 
     - default
-  
+
+  server:
+    port: 8080
+    servlet:
+      context-path: /member
+    
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
@@ -14,12 +19,20 @@ spring:
   
 
    
+
+
+  datasource:
+    url: jdbc:mariadb://10.178.230.98:3306/hotspot_mbr
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: hotspot_mbr_user
+    password: hotspot_mbr_user
+
 #  datasource:
 #    url: jdbc:h2:mem:member
 #    driverClassName: org.h2.Driver
 #    username: sa
-#    password:
-    
+#    password: 
+
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -30,10 +43,24 @@ spring:
         format_sql: true
         sql_comments: true
 
-  datasource:
-    url: jdbc:mariadb://10.178.230.98:3306/member
-    username: admin
-    password: EvzdKZX1XRs
+#  datasource:
+#    url: jdbc:h2:mem:member
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password: 
+
+#  datasource:
+#    url: jdbc:mariadb://10.178.230.98:3306/member
+#    username: admin
+#    password: EvzdKZX1XR
+
+
+#  datasource:
+#    url: jdbc:mariadb://169.56.96.234:3306/member
+#    driverClassName: org.mariadb.jdbc.Driver
+#    username: admin
+#    password: EvzdKZX1XR@ma
+
 
 logging:
   level: 
