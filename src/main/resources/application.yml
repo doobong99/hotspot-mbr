@@ -21,11 +21,11 @@ spring:
    
 
 
-  datasource:
-    url: jdbc:mariadb://10.178.230.98:3306/hotspot_mbr
-    driver-class-name: org.mariadb.jdbc.Driver
-    username: hotspot_mbr_user
-    password: hotspot_mbr_user
+#  datasource:
+#    url: jdbc:mariadb://10.178.230.98:3306/hotspot_mbr
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    username: hotspot_mbr_user
+#    password: hotspot_mbr_user
 
 #  datasource:
 #    url: jdbc:h2:mem:member
@@ -43,11 +43,11 @@ spring:
         format_sql: true
         sql_comments: true
 
-#  datasource:
-#    url: jdbc:h2:mem:member
-#    driverClassName: org.h2.Driver
-#    username: sa
-#    password: 
+  datasource:
+    url: jdbc:h2:mem:member
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
 
 #  datasource:
 #    url: jdbc:mariadb://10.178.230.98:3306/member
