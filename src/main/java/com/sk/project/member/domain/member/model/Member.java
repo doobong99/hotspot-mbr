@@ -1,6 +1,8 @@
 package com.sk.project.member.domain.member.model;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 import com.sk.project.member.domain.base.AbstractEntity;
 
@@ -14,5 +16,10 @@ public class Member extends AbstractEntity {
 	private Long age;
 	private String mbr_sts;
 	private String mbr_addr;
+	
+	@Enumerated(EnumType.STRING)
 	private Sex sex;
+	
+	@Enumerated(EnumType.STRING)
+	private Role role;
 }
