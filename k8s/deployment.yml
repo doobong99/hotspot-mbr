@@ -17,7 +17,7 @@ spec:
       containers:
       - name: hostpot-mbr
 #        image: dep-dev-registry.cloudzcp.io/hotspot/gs-spring-boot-docker:32
-        image: dep-dev-registry.cloudzcp.io/sample/hotspot-mbr:1
+        image: dep-dev-registry.cloudzcp.io/hotspot/hotspot-mbr:1
       imagePullSecrets:
       - name: jonas-secret 
 #        ports:
