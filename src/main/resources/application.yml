@@ -5,8 +5,10 @@
 
 server:
   port: 8080
-  servlet:
+  
+servlet:
     context-path: /mbr
+
 
 spring:
   profiles: local
