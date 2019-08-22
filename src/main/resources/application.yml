@@ -1,49 +1,69 @@
-spring:
-  profiles:
-    active: local
----
-
 server:
   port: 8080
-  servlet:
-    context-path: /mbr
 
 spring:
-  profiles: local
+  application:
+    basePath: /mbr
 
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
+    
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+
+
+#  datasource:
+#    url: jdbc:mariadb://10.178.230.98:3306/hotspot_mbr
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    username: hotspot_mbr_user
+#    password: hotspot_mbr_user
+
+#  datasource:
+#    url: jdbc:h2:mem:member
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password: 
+
+
+
+#  datasource:
+#    url: jdbc:h2:mem:member
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password: 
 
   datasource:
-    url: jdbc:mariadb://10.178.230.98/hotspot_member
-    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://localhost:3306/hotspot_member
+#    url: jdbc:mariadb://169.56.96.234:3306/hotspot_member
+    url: jdbc:mariadb://10.178.230.98:3306/hotspot_member
+    driverClassName: org.mariadb.jdbc.Driver
     username: hotspot_member_user
     password: hotspot_member_user
 
   jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        sql_comments: true
 
-#---
-
-#server:
-#  port: 9999
-#spring:
-#  profiles: local
-#
-#  jackson:
-#    serialization:
-#      WRITE_DATES_AS_TIMESTAMPS: false
 #
 #  datasource:
-#    url: jdbc:mariadb://localhost:3306/skccproject
-#    driver-class-name: org.mariadb.jdbc.Driver
-#    username: skccproject
-#    password: skccproject
-#
-#  jpa:
-#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-#    hibernate:
-#      ddl-auto: update
+#    url: jdbc:mariadb://localhost:3306/member
+#    driverClassName: org.mariadb.jdbc.Driver
+#    username: admin
+#    password: admin
+
+
+#logging:
+#  level: 
+#    org.hibernate.type: trace
+      
