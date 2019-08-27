@@ -19,7 +19,7 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
-        sql_comments: true
+        sql_comments: true 
 
   session: 
     store-type: redis
