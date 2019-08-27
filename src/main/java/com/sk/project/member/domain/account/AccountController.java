@@ -11,7 +11,7 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @GetMapping("/d/{role}/{username}/{password}")
+    @GetMapping("/account/{role}/{username}/{password}")
     public Account createAccount(@ModelAttribute Account account) {
     	System.out.println("hi : "+account.toString());
         return accountService.createNew(account);

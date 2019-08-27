@@ -5,7 +5,7 @@ server:
 spring:
   datasource:
     url: jdbc:mariadb://10.178.230.98:3306/hotspot_member
-#    url: jdbc:mariadb://169.56.96.234:3306/hotspot_reward
+#    url: jdbc:mariadb://169.56.96.234:3306/hotspot_member
 #    url: jdbc:mariadb://localhost:3306/hotspot_member
     driverClassName: org.mariadb.jdbc.Driver
     username: hotspot_member_user
@@ -21,8 +21,8 @@ spring:
         format_sql: true
         sql_comments: true 
 
-  session: 
-    store-type: redis
+#  session: 
+#    store-type: redis
 #spring.redis.cluster.nodes: 127.0.0.1:6379
 #spring.session.store-type : redis
 
@@ -34,6 +34,7 @@ spring:
 
   redis:
     uri: redis://O6L6ATk7Be@10.178.230.75:6379
+#    uri: redis://O6L6ATk7Be@169.56.96.235:6379
 #    uri: redis://localhost:6379    
 
 logging:
