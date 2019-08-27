@@ -10,7 +10,7 @@ spring:
     driverClassName: org.mariadb.jdbc.Driver
     username: hotspot_member_user
     password: hotspot_member_user
-    
+     
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
