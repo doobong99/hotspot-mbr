@@ -2,6 +2,9 @@ server:
   port: 8080
   context-path: /mbr
 
+  session:
+    timeout: 3
+
 spring:
   datasource:
     url: jdbc:mariadb://10.178.230.98:3306/hotspot_member
@@ -21,8 +24,9 @@ spring:
         format_sql: true
         sql_comments: true 
 
-#  session: 
-#    store-type: redis
+  session: 
+    store-type: redis
+
 #spring.redis.cluster.nodes: 127.0.0.1:6379
 #spring.session.store-type : redis
 
@@ -32,10 +36,12 @@ spring:
 #    host: 10.178.230.75
 #    port: 6379
 
-#  redis:
-#    uri: redis://O6L6ATk7Be@10.178.230.75:6379
+  redis:
+    uri: redis://O6L6ATk7Be@10.178.230.75:6379
 #    uri: redis://O6L6ATk7Be@169.56.96.235:6379
 #    uri: redis://localhost:6379    
+    timeout: 3
+
 
 logging:
   level: 
