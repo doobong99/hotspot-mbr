@@ -5,16 +5,61 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
+//import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+//import org.springframework.data.redis.core.RedisTemplate;
+//import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 
 //@Configuration
 public class RedisConfig {
 
+	/*
 	private @Value("${spring.redis.host}") String redisHost;
 	private @Value("${spring.redis.port}") int redisPort;
+
+
+	@Bean
+	JedisConnectionFactory jedisConnectionFactory() {
+		
+		JedisConnectionFactory factory = new JedisConnectionFactory();
+		factory.setHostName(redisHost);
+		factory.setPort(redisPort);
+		//factory.setPassword(this.password);
+		factory.setUsePool(true);
+		factory.afterPropertiesSet();
+		
+		System.out.println("=----------------------redis host is "+redisHost);
+		return factory;
+	}
+	
+	@Autowired
+	private JedisConnectionFactory jedisConnectionFactory;
+	
+	@Bean
+	public RedisTemplate<String, Object> redisTemplate() {
+			StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+
+			RedisTemplate<String, Object> redisTemplate = new RedisTemplate<String, Object>();
+			redisTemplate.setConnectionFactory(jedisConnectionFactory);
+			redisTemplate.setKeySerializer(stringRedisSerializer);
+			redisTemplate.setHashKeySerializer(stringRedisSerializer);
+
+			redisTemplate.setValueSerializer(stringRedisSerializer);
+			
+			
+			return redisTemplate;
+	}
+
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+		return new PropertySourcesPlaceholderConfigurer();
+	}
+	
+	*/
+	
+	
+	
+	
 
 //	@Bean
 //	public JedisConnectionFactory connectionFactory() {				
@@ -30,19 +75,6 @@ public class RedisConfig {
 //		return new JedisConnectionFactory(redisStandaloneConfiguration);
 //	}
 
-	@Bean
-	JedisConnectionFactory jedisConnectionFactory() {
-		
-		JedisConnectionFactory factory = new JedisConnectionFactory();
-		factory.setHostName(redisHost);
-		factory.setPort(redisPort);
-		//factory.setPassword(this.password);
-		factory.setUsePool(true);
-		factory.afterPropertiesSet();
-		
-		System.out.println("=----------------------redis host is "+redisHost);
-		return factory;
-	}
 	
 //	@Bean
 //	RedisTemplate<?, ?> redisTemplate() {
@@ -66,23 +98,7 @@ public class RedisConfig {
 //		return redisTemplate;
 //	}
 
-	@Autowired
-	private JedisConnectionFactory jedisConnectionFactory;
-	
-	@Bean
-	public RedisTemplate<String, Object> redisTemplate() {
-			StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
 
-			RedisTemplate<String, Object> redisTemplate = new RedisTemplate<String, Object>();
-			redisTemplate.setConnectionFactory(jedisConnectionFactory);
-			redisTemplate.setKeySerializer(stringRedisSerializer);
-			redisTemplate.setHashKeySerializer(stringRedisSerializer);
-
-			redisTemplate.setValueSerializer(stringRedisSerializer);
-			
-			
-			return redisTemplate;
-	}
 	
 //	@Bean
 //	RedisCacheManager cacheManager() {
@@ -92,11 +108,6 @@ public class RedisConfig {
 //	}
 
 
-	@Bean
-	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-		return new PropertySourcesPlaceholderConfigurer();
-	}
-	
 }
 
 
