@@ -33,6 +33,7 @@ public class TokenCheckController {
 	public Boolean createAuthenticationToken(@RequestBody JSONObject token) throws Exception {
 		String token_key = (String) token.get("token");
         System.out.println("token_key "+token_key);
+//        token_key = "Bearer "+ token_key;
 		Boolean token_chk = jwtTokenUtil.isTokenExpired(token_key);
 		System.out.println("token_chk : "+token_chk);
 		return token_chk;

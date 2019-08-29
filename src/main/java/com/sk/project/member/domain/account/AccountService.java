@@ -37,4 +37,9 @@ public class AccountService implements UserDetailsService {
     	//account.setPassword("{noop}" + account.getPassword());
     	//return account;
     }
+
+	public Account findId(Account account) {
+		// TODO Auto-generated method stub
+		return accountRepository.findByUsername(account.getUsername());
+	}
 }
