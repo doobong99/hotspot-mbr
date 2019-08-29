@@ -1,6 +1,6 @@
 package com.sk.project;
 
-import javax.servlet.http.HttpSession;
+
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpEntity;
@@ -13,11 +13,11 @@ import org.springframework.web.client.RestTemplate;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
-@RestController
-@SpringBootApplication
+//@Slf4j
+//@RestController
+//@SpringBootApplication
 public class SessionTest {
-	@GetMapping("/request")
+	/*@GetMapping("/request")
     public String getCookie(HttpSession session) {
 		System.out.println("-----start------");
         String sessionKey = session.getId();
@@ -33,6 +33,6 @@ public class SessionTest {
         System.out.println("-----end------");
         return "server1_sessionKey : "+session.getId()+"<br>server2_sessionKey : ";
     }
-
+*/
 
 }

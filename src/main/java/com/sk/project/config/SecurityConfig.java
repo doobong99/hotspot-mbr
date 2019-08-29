@@ -8,33 +8,33 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .mvcMatchers("/", "/info","/account/**").permitAll()
-                .mvcMatchers("/admin").hasRole("ADMIN")
-                .anyRequest().authenticated();
-        http.formLogin();
-        http.httpBasic();
-        http.csrf().disable();
-    }
-    
+//@Configuration
+//@EnableWebSecurity
+//public class SecurityConfig extends WebSecurityConfigurerAdapter {
+//
 //    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//    	auth.inMemoryAuthentication()
-//                .withUser("keesun").password("{noop}123").roles("USER").and()
-//                .withUser("admin").password("{noop}!@#").roles("ADMIN");
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests()
+//                .mvcMatchers("/", "/info","/account/**").permitAll()
+//                .mvcMatchers("/admin").hasRole("ADMIN")
+//                .anyRequest().authenticated();
+//        http.formLogin();
+//        http.httpBasic();
+//        http.csrf().disable();
 //    }
-    
-//    @Bean
-//    @Override
-//    public AuthenticationManager authenticationManagerBean() throws Exception {
-//        return super.authenticationManagerBean();
-//    }
-
-
-}
+//    
+////    @Override
+////    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+////    	auth.inMemoryAuthentication()
+////                .withUser("keesun").password("{noop}123").roles("USER").and()
+////                .withUser("admin").password("{noop}!@#").roles("ADMIN");
+////    }
+//    
+////    @Bean
+////    @Override
+////    public AuthenticationManager authenticationManagerBean() throws Exception {
+////        return super.authenticationManagerBean();
+////    }
+//
+//
+//}

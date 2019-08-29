@@ -21,10 +21,10 @@ public class Application {
 //		return (PasswordEncoder) NoOpPasswordEncoder.getInstance();
 //	}
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-	}
+//	@Bean
+//	public PasswordEncoder passwordEncoder() {
+//		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+//	}
 
 	
 	@RequestMapping("/sample-gs-spring-boot-docker")

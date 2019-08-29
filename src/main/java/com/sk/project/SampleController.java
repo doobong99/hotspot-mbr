@@ -2,7 +2,6 @@ package com.sk.project;
 
 import java.security.Principal;
 
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +14,6 @@ public class SampleController {
 	@GetMapping("/")
 	public String index(Model model, Principal principal) {
 		System.out.println("principal : " +principal );
-		System.out.println("principal name: " +principal.getName() );
 		if( principal == null ) {
 			model.addAttribute("message", "Hello Spring Security");
 		} else {

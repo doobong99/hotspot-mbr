@@ -1,9 +1,11 @@
 server:
   port: 8080
-  context-path: /mbr
+  servlet:
+    context-path: /mbr
+#  context-path: /mbr
 
-  session:
-    timeout: 3
+#  session:
+#    timeout: 3
 
 spring:
   datasource:
@@ -23,15 +25,22 @@ spring:
         show_sql: true
         format_sql: true
         sql_comments: true 
- 
+
+
+#jwt.secret: 
+#    javainuse
+# 
 #  session: 
 #    store-type: redis
 #
 #  redis:
 #    uri: redis://O6L6ATk7Be@10.178.230.75:6379
 ###    uri: redis://O6L6ATk7Be@169.56.96.235:6379
-##    uri: redis://localhost:6379    
+#    uri: redis://localhost:6379    
 ##    timeout: 3
+
+jwt.secret: 
+    javainuse
 
 #
 #spring.redis.cluster.nodes: 127.0.0.1:6379
