@@ -110,7 +110,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/authenticate").permitAll();
 		
 		http.authorizeRequests()
-        .mvcMatchers("/", "/info", "/account/**", "/signup","/authenticate","/login/rest","/token/chk").permitAll()
+        .mvcMatchers("/", "/info", "/account/**", "/signup","/authenticate","/login/rest","/token/chk","/swagger-ui.html").permitAll()
         .mvcMatchers("/admin").hasRole("ADMIN")
         .mvcMatchers("/user").hasRole("USER")
         .anyRequest().authenticated();

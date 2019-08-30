@@ -24,6 +24,12 @@ public class AccountController {
         return accountService.findId(account);
     }
     
+    @GetMapping("/account/update/{username}")
+    public Account updateAccount(@ModelAttribute Account account) {
+    	System.out.println("hi : "+account.toString());
+        return accountService.updateAccount(account);
+    }
+    
 //    
 //    @PostMapping("/account/{role}/{username}/{password}")
 //    public Account updateAccount(@ModelAttribute Account account) {

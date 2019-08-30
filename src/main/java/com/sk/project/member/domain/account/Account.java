@@ -1,5 +1,7 @@
 package com.sk.project.member.domain.account;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +24,17 @@ public class Account {
     private String password;
 
     private String role;
+
+    public Account(Integer id, String username, String password, String role) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+    
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;
